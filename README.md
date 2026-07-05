@@ -20,9 +20,9 @@
 
 ## Screenshots
 
-| Desktop | Notification panel |
-|---|---|
-| ![Hyprland desktop](screenshots/desktop.png) | ![Quickshell notifications](screenshots/notifications.png) |
+| Desktop | Notification panel | App drawer |
+|---|---|---|
+| ![Hyprland desktop](screenshots/desktop.png) | ![Quickshell notifications](screenshots/notifications.png) | ![App drawer](screenshots/drawer.png) |
 
 ---
 
