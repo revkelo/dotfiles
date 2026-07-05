@@ -1,0 +1,2 @@
+
+hl.env("GNOME_KEYRING_CONTROL", "/run/user/1000/keyring")

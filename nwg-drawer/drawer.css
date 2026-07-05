@@ -1,0 +1,106 @@
+/* ── nwg-drawer theme — match Hyprland/Quickshell dark setup ── */
+
+window {
+    background-color: rgba(26, 26, 26, 0.96);
+    color: #cfdbcf;
+    font-family: "JetBrains Mono", "JetBrainsMonoNL Nerd Font", sans-serif;
+    font-size: 13px;
+}
+
+/* ── Search bar ── */
+entry {
+    background-color: rgba(45, 42, 47, 0.9);
+    color: #cfdbcf;
+    border: 1px solid rgba(13, 183, 212, 0.25);
+    border-radius: 18px;
+    padding: 6px 14px;
+    caret-color: #0db7d4;
+    margin: 8px 8px 4px 8px;
+}
+
+entry:focus {
+    border-color: rgba(13, 183, 212, 0.7);
+    box-shadow: 0 0 0 2px rgba(13, 183, 212, 0.15);
+}
+
+/* ── App buttons ── */
+button {
+    background: none;
+    border: none;
+    border-radius: 14px;
+    padding: 6px;
+    color: #cfdbcf;
+    transition: background-color 120ms ease;
+}
+
+button:hover {
+    background-color: rgba(13, 183, 212, 0.12);
+    color: #e4f4f5;
+}
+
+button:active {
+    background-color: rgba(13, 183, 212, 0.25);
+}
+
+image {
+    background: none;
+    border: none;
+}
+
+/* ── Category buttons (sidebar de categorías) ── */
+#category-button {
+    margin: 2px 6px;
+    padding: 6px 12px;
+    border-radius: 14px;
+    color: #b3bcb1;
+    font-size: 12px;
+}
+
+#category-button:hover {
+    background-color: rgba(13, 183, 212, 0.12);
+    color: #cfdbcf;
+}
+
+#category-button:checked {
+    background-color: rgba(13, 183, 212, 0.22);
+    color: #0db7d4;
+}
+
+/* ── Apps pinned ── */
+#pinned-box {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(203, 196, 203, 0.12);
+    margin-bottom: 4px;
+}
+
+/* ── File search results ── */
+#files-box {
+    padding: 6px;
+    border: 1px solid rgba(203, 196, 203, 0.1);
+    border-radius: 14px;
+    background-color: rgba(45, 42, 47, 0.6);
+}
+
+/* ── Math result ── */
+#math-label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #0db7d4;
+}
+
+/* ── Scrollbar ── */
+scrollbar {
+    background-color: transparent;
+    border: none;
+    min-width: 6px;
+}
+
+scrollbar slider {
+    background-color: rgba(203, 196, 203, 0.2);
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+scrollbar slider:hover {
+    background-color: rgba(13, 183, 212, 0.4);
+}
