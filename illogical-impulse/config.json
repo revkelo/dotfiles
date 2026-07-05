@@ -80,7 +80,7 @@
             "workspaceZoom": 1.07
         },
         "thumbnailPath": "",
-        "wallpaperPath": "~/Imágenes/Wallpapers/wallpaper.jpg",
+        "wallpaperPath": "~/.config/wallpapers/wallpaper.jpg",
         "widgets": {
             "clock": {
                 "cookie": {
