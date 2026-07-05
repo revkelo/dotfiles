@@ -80,7 +80,7 @@
             "workspaceZoom": 1.07
         },
         "thumbnailPath": "",
-        "wallpaperPath": "/home/kevin/Descargas/windows-10-dark-3840x2160-26140.jpg",
+        "wallpaperPath": "~/Imágenes/Wallpapers/wallpaper.jpg",
         "widgets": {
             "clock": {
                 "cookie": {
@@ -363,7 +363,7 @@
         "updateInterval": 3000
     },
     "screenRecord": {
-        "savePath": "/home/kevin/Vídeos"
+        "savePath": "~/Vídeos"
     },
     "screenSnip": {
         "savePath": ""
