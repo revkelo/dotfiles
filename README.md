@@ -1,8 +1,8 @@
 # dotfiles — revkelo
 
-Mi configuración personal de CachyOS con Hyprland. Setup minimalista, rápido y orientado a productividad con IA integrada.
+> CachyOS · Hyprland · Quickshell · Fish · IA integrada
 
-![Desktop](screenshot.png)
+![Desktop](screenshots/desktop.png)
 
 ---
 
@@ -12,18 +12,26 @@ Mi configuración personal de CachyOS con Hyprland. Setup minimalista, rápido y
 |---|---|
 | **OS** | CachyOS (rolling, base Arch) |
 | **Kernel** | 7.0.5-2-cachyos (PREEMPT_DYNAMIC) |
-| **Compositor** | Hyprland v0.55.1 (config en Lua) |
+| **Compositor** | Hyprland v0.55.1 |
 | **Shell** | Fish 4.7.1 + Starship |
-| **Hardware** | Dell Inspiron 15 3515 — AMD Ryzen 5 3450U / Radeon Vega / 13 GB RAM |
+| **Hardware** | Dell Inspiron 15 3515 — Ryzen 5 3450U · Radeon Vega · 13 GB RAM |
 
 ---
 
-## Stack principal
+## Screenshots
+
+| Desktop | Panel de notificaciones |
+|---|---|
+| ![Desktop](screenshots/desktop.png) | ![Notifications](screenshots/notifications.png) |
+
+---
+
+## Stack
 
 | Rol | App |
 |---|---|
 | Barra / Widgets | Quickshell (`ii` profile) |
-| Terminal | Kitty (JetBrains Mono Nerd Font 11pt) |
+| Terminal | Kitty + JetBrains Mono Nerd Font |
 | Lanzador | Fuzzel |
 | Navegador | Chrome |
 | Editor | VS Code |
@@ -38,10 +46,10 @@ Mi configuración personal de CachyOS con Hyprland. Setup minimalista, rápido y
 
 ## IA integrada
 
-- **Claude Code** — `Super + Alt + C` abre Kitty con Claude Code
-- **Sidebar IA** — `Super + A` con soporte para Claude, Gemini, Mistral, DeepSeek
+- **Claude Code** — `Super + Alt + C` abre Kitty con Claude Code listo para usar
+- **Sidebar IA** — `Super + A` con soporte para Claude, Gemini, Mistral y DeepSeek
 - **LiteLLM proxy** local en `localhost:4099` (API compatible con OpenAI)
-- **Consulta rápida** — `Super + Shift + Alt + clic-der` sobre texto seleccionado → notificación con respuesta
+- **Consulta rápida** — selecciona texto + `Super + Shift + Alt + clic-der` → respuesta como notificación
 
 ---
 
@@ -49,7 +57,7 @@ Mi configuración personal de CachyOS con Hyprland. Setup minimalista, rápido y
 
 | Atajo | Acción |
 |---|---|
-| `Super + Return` | Terminal |
+| `Super + Return` | Terminal (Kitty) |
 | `Super + W` | Chrome |
 | `Super + C` | VS Code |
 | `Super + R` | Nautilus |
@@ -63,35 +71,33 @@ Mi configuración personal de CachyOS con Hyprland. Setup minimalista, rápido y
 
 ---
 
-## Estructura de configs
+## Estructura
 
 ```
 ~/.config/
 ├── hypr/
-│   ├── hyprland.conf       # Config principal
-│   ├── custom/             # ← cambios personales aquí
+│   ├── hyprland.conf
+│   ├── custom/             # cambios personales aquí
 │   │   ├── keybinds.lua
 │   │   ├── variables.lua
 │   │   ├── execs.lua
-│   │   └── scripts/ai/     # scripts Claude Code
+│   │   └── scripts/ai/
 │   └── hypridle.conf
-├── fish/                   # shell + aliases
-├── quickshell/             # barra y widgets (ii)
-├── kitty/                  # terminal
-├── fuzzel/                 # lanzador
-├── btop/                   # monitor
-└── hypr/hyprlock/          # pantalla de bloqueo
+├── fish/
+├── quickshell/
+├── kitty/
+├── fuzzel/
+├── btop/
+└── hypr/hyprlock/
 ```
 
 ---
 
-## Restaurar en una instalación nueva
+## Instalar en sistema nuevo
 
 ```bash
-# Clonar directamente en ~/.config
 git clone https://github.com/revkelo/dotfiles ~/.config
 
-# Instalar dependencias principales
 sudo pacman -S hyprland fish starship kitty fuzzel btop nwg-drawer quickshell matugen
 ```
 
