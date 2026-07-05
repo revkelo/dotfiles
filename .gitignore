@@ -1,0 +1,31 @@
+# Caché y archivos temporales
+*.cache
+*.log
+*.tmp
+__pycache__/
+*.pyc
+
+# Archivos compilados de zsh
+*.zwc
+*.zcompdump
+
+# Tokens y autenticación
+gh/
+.claude.json
+
+# Historial de shell
+.bash_history
+.zsh_history
+
+# Mozilla/Firefox (demasiado grande, tiene contraseñas)
+mozilla/
+
+# Archivos binarios de dconf (base de datos GNOME)
+dconf/
+
+# Caché de miniaturas y archivos grandes
+thumbnails/
+*.png.bak
+
+# Sesión
+session/

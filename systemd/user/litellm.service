@@ -1,0 +1,12 @@
+[Unit]
+Description=Claude proxy local (sin API keys, usa claude CLI)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/kevin/.local/share/claude-proxy/server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
