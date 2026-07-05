@@ -20,9 +20,13 @@
 
 ## Screenshots
 
-| Desktop | Notification panel | App drawer |
+| Desktop | Notification panel |
+|---|---|
+| ![Hyprland desktop](screenshots/desktop.png) | ![Quickshell notifications](screenshots/notifications.png) |
+
+| App drawer | btop | fastfetch |
 |---|---|---|
-| ![Hyprland desktop](screenshots/desktop.png) | ![Quickshell notifications](screenshots/notifications.png) | ![App drawer](screenshots/drawer.png) |
+| ![App drawer](screenshots/drawer.png) | ![btop](screenshots/btop.png) | ![fastfetch](screenshots/fastfetch.png) |
 
 ---
 
