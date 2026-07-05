@@ -77,6 +77,85 @@ This setup has Claude Code and multiple AI models wired directly into the deskto
 
 ---
 
+## Full Install Guide
+
+### 1. Install CachyOS
+
+Download the ISO from [cachyos.org](https://cachyos.org) and install with the Hyprland desktop profile selected. CachyOS is Arch-based with optimized kernels and a fast package manager.
+
+### 2. Clone the dotfiles
+
+```bash
+git clone https://github.com/revkelo/dotfiles ~/.config
+```
+
+> All configs land directly in `~/.config` where Hyprland, Fish, Kitty, etc. expect them.
+
+### 3. Install packages
+
+Core system and desktop:
+
+```bash
+sudo pacman -S hyprland uwsm kitty fish starship btop fastfetch \
+  fuzzel nwg-drawer nautilus flatpak git nodejs npm \
+  pipewire pipewire-alsa gst-libav ffmpegthumbnailer \
+  ttf-meslo-nerd noto-fonts noto-fonts-emoji
+```
+
+AUR packages (Quickshell, fonts, themes — the illogical-impulse suite):
+
+```bash
+paru -S illogical-impulse-hyprland illogical-impulse-quickshell-git \
+  illogical-impulse-fonts-themes illogical-impulse-basic \
+  illogical-impulse-audio illogical-impulse-backlight \
+  illogical-impulse-bibata-modern-classic-bin \
+  illogical-impulse-screencapture illogical-impulse-widgets \
+  illogical-impulse-portal illogical-impulse-python \
+  adw-gtk-theme-git ttf-material-symbols-variable-git \
+  otf-space-grotesk ttf-readex-pro matugen
+```
+
+### 4. Set the wallpaper
+
+The wallpaper is included in the repo at `~/.config/wallpapers/wallpaper.jpg`. Set it via the Quickshell wallpaper selector or run:
+
+```bash
+~/.config/quickshell/ii/scripts/colors/switchwall.sh ~/.config/wallpapers/wallpaper.jpg
+```
+
+This also generates the color scheme automatically via `matugen`.
+
+### 5. Install Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+### 6. Set up API keys
+
+The AI sidebar and LiteLLM proxy read keys from the system keyring — nothing is stored in plain text. Add your keys:
+
+```bash
+# Anthropic (Claude Code + sidebar)
+export ANTHROPIC_API_KEY=your_key_here
+
+# Optional: Gemini for wallpaper categorization
+secret-tool store --label='illogical-impulse' application illogical-impulse
+# paste your JSON with apiKeys.gemini when prompted
+```
+
+### 7. Enable services
+
+```bash
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
+```
+
+### 8. Log in
+
+Reboot and select the Hyprland session in SDDM. Everything should load automatically.
+
+---
+
 ## Config structure
 
 Personal Hyprland changes live in `custom/` — never touch the upstream `hyprland/` folder.
@@ -96,17 +175,8 @@ Personal Hyprland changes live in `custom/` — never touch the upstream `hyprla
 ├── kitty/
 ├── fuzzel/
 ├── btop/
+├── wallpapers/
 └── hypr/hyprlock/
-```
-
----
-
-## Install on a fresh system
-
-```bash
-git clone https://github.com/revkelo/dotfiles ~/.config
-
-sudo pacman -S hyprland fish starship kitty fuzzel btop nwg-drawer quickshell matugen
 ```
 
 ---
